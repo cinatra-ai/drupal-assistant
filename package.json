@@ -1,0 +1,26 @@
+{
+  "name": "@cinatra-ai/drupal-assistant",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "The Cinatra Drupal authoring assistant — drafts, structures, and publishes Drupal content against a connected Drupal site.",
+  "type": "module",
+  "files": [
+    "cinatra"
+  ],
+  "cinatra": {
+    "apiVersion": "cinatra.ai/v1",
+    "kind": "agent",
+    "dependencies": [
+      {
+        "packageName": "@cinatra-ai/drupal-assistant-connector",
+        "edgeType": "runtime",
+        "versionConstraint": {
+          "kind": "semver-range",
+          "range": "^0.1.2"
+        },
+        "requirement": "required",
+        "kind": "connector"
+      }
+    ]
+  }
+}
